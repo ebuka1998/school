@@ -112,3 +112,7 @@
     border: 1px solid #ccc;
     border-top: none;
   }
+
+  .form__error{
+      color: rgb(241, 22, 22)
+  }
