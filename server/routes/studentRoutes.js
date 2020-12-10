@@ -12,4 +12,6 @@ router.post('/loginStudent', studentController.loginStudent)
 
 router.get('/me',authorize , studentController.getStudent)
 
+router.put('/updateStudent/:id', studentController.updateStudent)
+
 module.exports = router

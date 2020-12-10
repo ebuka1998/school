@@ -99,6 +99,15 @@ export const StudentContextProvider = (props) => {
         }
     }
 
+    const updateStudent = async (id, payload) => {
+        try {
+            await axios.put(`${baseUrl}/updateStudent/${id}`, payload)
+            getStudent()
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
 
     return(
         <StudentContext.Provider
@@ -114,7 +123,8 @@ export const StudentContextProvider = (props) => {
                 getAssignments,
                 getAssignment,
                 deleteAssignment,
-                updateAssignment
+                updateAssignment,
+                updateStudent
             }}
         >
             {props.children}

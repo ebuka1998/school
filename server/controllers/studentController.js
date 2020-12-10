@@ -62,6 +62,16 @@ const studentController = {
         } catch (error) {
             res.status(404).send(error.message)   
         }
+    },
+
+    async updateStudent(req, res) {
+        const {name_of_student, age_of_student, image_url} = req.body
+        try {
+            const updateStudent = await pool.query("UPDATE students SET name_of_student = $1, age_of_student = $2, image_url = $3 WHERE id = $4 RETURNING *", [name_of_student, age_of_student, image_url, req.params.id])
+            res.send(updateStudent.rows[0])
+        } catch (error) {
+            res.status(404).send(error.message) 
+        }
     }
 }
 

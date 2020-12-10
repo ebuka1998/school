@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-const StudentCard = ({image_url, name_of_student, age_of_student}) => {
+const StudentCard = ({id, image_url, name_of_student, age_of_student}) => {
     return (
         <div className="ui special cards">
         <div className="card">
@@ -21,10 +22,10 @@ const StudentCard = ({image_url, name_of_student, age_of_student}) => {
               </div>
               </div>
               <div className="extra content">
-              <a href="/">
+                <Link to = {`/${name_of_student}/${id}/update`}>
                   <i className="users icon"></i>
                   update
-              </a>
+                </Link>
               </div>
           </div>
           </div>

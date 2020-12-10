@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import '../app.css'
 import { StudentContext } from '../context/StudentContext'
 import {Link} from 'react-router-dom'

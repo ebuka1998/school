@@ -31,6 +31,7 @@ const StudentHomePage = (props) => {
                 <div className="ui grid" style={{marginTop: '30px'}}>
                     <div className="six wide column">
                         <StudentCard
+                            id={student && student.id}
                             image_url={student && student.image_url}
                             name_of_student = {student && student.name_of_student}
                             age_of_student = {student && student.age_of_student}
